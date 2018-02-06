@@ -1,0 +1,13 @@
+.content{
+    flex: auto;
+}
+.catalog-card__name{
+    line-height: 65px;
+}
+.catalog-card__name span{
+    line-height: 110%;
+}
+header,
+footer{
+    display: block;
+}

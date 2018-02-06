@@ -1,0 +1,158 @@
+//= include/header.html
+
+
+<div class="crumbs">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="/">Главная</a></li>
+            <li class="active">Корзина</li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <div class="container">
+        <h1 class="header1">Корзина</h1>
+        <div class="order">
+            <div class="order__table" id="msCart">
+                <div class="order__row">
+                    <div class="order__image">
+                        <img src="http://via.placeholder.com/234x150" alt="">
+                        <div class="order__link">
+                            <a href="#">Посмотреть товар</a>
+                        </div>
+                    </div>
+                    <div class="order__product-name">
+                        Комплект с бетменами розовый с завязками
+                    </div>
+                    <div class="order__actions">
+                        <div class="order__count">
+                            <div class="order__label">Количество</div>
+                            <div class="table auto incrementer white">
+                                <div class="middle">
+                                    <span class="minus">-</span>
+                                </div>
+                                <div class="middle">
+                                    <form method="post" class="ms2_form form-inline" role="form">
+                                        <input type="hidden" name="key" value="15977213f09416ff8098905d2f76aaeb"/>
+                                        <input data-current="1" data-price="0,00" class="js_zcount count_live" type="text" name="count" value="1" placeholder="">
+                                        <button class="btn btn-default" type="submit" name="ms2_action" value="cart/change"></button>
+                                    </form>
+                                </div>
+                                <div class="middle">
+                                    <span class="plus">+</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="order__price">
+                            <div class="order__label">Цена</div>
+                            <div class="order__price-line">
+                                <span class="order__price-value">1000</span>
+                                <span class="order__price-currency">руб</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order__remove">
+                        <form method="post" class="ms2_form">
+                            <input type="hidden" name="key" value="e1a715c35534a695c6becf7f07954f11">
+                            <button class="btn btn-default" type="submit" name="ms2_action" value="cart/remove">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="order__row">
+                    <div class="order__image">
+                        <img src="http://via.placeholder.com/234x150" alt="">
+                        <div class="order__link">
+                            <a href="#">Посмотреть товар</a>
+                        </div>
+                    </div>
+                    <div class="order__product-name">
+                        Комплект с бетменами
+                    </div>
+                    <div class="order__actions">
+                        <div class="order__count">
+                            <div class="order__label">Количество</div>
+                            <div class="table auto incrementer white">
+                                <div class="middle">
+                                    <span class="minus">-</span>
+                                </div>
+                                <div class="middle">
+                                    <form method="post" class="ms2_form form-inline" role="form">
+                                        <input type="hidden" name="key" value="15977213f09416ff8098905d2f76aaeb"/>
+                                        <input data-current="1" data-price="0,00" class="js_zcount count_live" type="text" name="count" value="1" placeholder="">
+                                        <button class="btn btn-default" type="submit" name="ms2_action" value="cart/change"></button>
+                                    </form>
+                                </div>
+                                <div class="middle">
+                                    <span class="plus">+</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="order__price">
+                            <div class="order__label">Цена</div>
+                            <div class="order__price-line">
+                                <span class="order__price-value">1000</span>
+                                <span class="order__price-currency">руб</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order__remove">
+                        <form method="post" class="ms2_form">
+                            <input type="hidden" name="key" value="e1a715c35534a695c6becf7f07954f11">
+                            <button class="btn btn-default" type="submit" name="ms2_action" value="cart/remove">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="order__row order__row--itogo">
+                    <div class="order-itogo__image"></div>
+                    <div class="order-itogo__product"></div>
+                    <div class="order__actions">
+                        <div class="order-itogo__count"><span>ИТОГ</span></div>
+                        <div class="order-itogo__price">
+                            <div class="order__price-line">
+                                <span class="order__price-value">2000</span>
+                                <span class="order__price-currency">руб</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="order-form">
+            <div class="order-form__caption">Оформить заказ</div>
+            <form action="">
+                <input type="text" name="name" placeholder="Имя *" />
+                <input type="text" name="name" placeholder="E-mail *" />
+                <input type="text" name="name" placeholder="Телефон *" />
+                <input type="text" name="name" placeholder="Адрес доставки" />
+                <div class="hint">Поля обязательные для заполнения *</div>
+                <div class="order-form__submit">
+                    <button class="xbtn">Заказать</button>
+                </div>
+                <div class="order-form__agree">
+                    <label >
+                        <input type="hidden" name="iagree[]" value="">
+                        <input class="checkbox" name="iagree[]" type="checkbox" checked value="Согласен">
+                        <span class="checkbox-custom"></span>
+                        <span name="iagree"></span>
+                        <span class="label">выражаю согласие на обработку персональных данных<br /> (<a href="#">политика конфиденциальности</a>)</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+//= include/footer.html

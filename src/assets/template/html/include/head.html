@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Главная страница</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @if NODE_ENV='development' -->
+    <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
+    <link rel="stylesheet" href="/assets/template/vendor/selectric/selectric.css">
+    <link rel="stylesheet" href="/assets/template/vendor/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/template/vendor/elastic/menu_elastic.css">
+    <link rel="stylesheet" href="/assets/template/css/main.css">
+    <!-- @endif -->
+
+    <!-- @if NODE_ENV='production' -->
+    <link rel="stylesheet" href="assets/template/css/main.min.css">
+    <!-- @endif -->
+</head>
+<body>
+
+
+
+<div class="header__burger">
+    <a href="#" class="burger toogle-mobile-menu" data-mfp-src="#mobile-menu"></a>
+</div>
+
+            
+<div class="mfp-hide mobile_menu" id="mobile-menu">
+    <div class="">
+        <ul class="m-menu__list">
+            <li><a href="/catalog.html">Leather</a></li>
+            <li><a href="#">Leather CS</a></li>
+            <li><a href="#">Где купить</a></li>
+            <li><a href="#">Покупателям</a></li>
+            <li><a href="#">Партнерам</a></li>
+            <li><a href="#" id="open-button">Контакты</a></li>
+        </ul>
+    </div>
+</div>
