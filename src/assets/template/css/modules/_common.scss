@@ -1,12 +1,11 @@
 body{
-  font-family: 'NeoSansPro', sans-serif;
   color: #4c4c4c;
 }
 a{
   color: $blue;
   outline: none;
   &:hover{
-    color: #098793;
+    color: #000;
   }
   &:focus{
     outline: none;
@@ -45,9 +44,12 @@ a{
   a{
     color: #fff;
     text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
   }
   &__top{
-    padding: 30px 0 35px;
+    padding: 28px 0 8px;
     background: #0d2b5d;
     .f-row{
       display: flex;
@@ -71,29 +73,63 @@ a{
   }
   &__logo{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 28px;
     line-height: 120%;
+    margin-bottom: 12px;
     span{
       font-weight: normal;
-      font-size: 14px;
+      font-size: 17px;
     }
+  }
+  &__phone{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1px;
+  }
+  &__email{
+    font-size: 14px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    padding-left: 27px;
+  }
+  &__private-police{
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 120%;
   }
 }
 .footer-menu{
   display: flex;
   justify-content: space-between;
+  margin-top: 12px;
   ul{
     margin: 0;
     padding: 0;
     list-style-type: none;
+    li{
+      font-size: 14px;
+      margin-bottom: 8px;
+      line-height: 140%;
+    }
   }
   &__item{
-    padding: 0 20px;
+    padding-right: 50px;
+    &:last-child{
+      padding-right: 0;
+    }
     &--main{
-      li{
-        text-transform: uppercase;
-        white-space: nowrap;
-        font-weight: bold;
+      width: 230px;
+      flex-shrink: 0;
+      padding: 0px 10px 10px 50px;
+      ul {
+        li {
+          text-transform: uppercase;
+          white-space: nowrap;
+          font-weight: bold;
+          margin-bottom: 14px;
+          font-size: 14px;
+        }
       }
     }
     &--nowrap{
@@ -104,7 +140,8 @@ a{
     text-transform: uppercase;
     white-space: nowrap;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
   }
 }
 
@@ -123,6 +160,7 @@ a{
     span{
       font-weight: normal;
       font-size: 18px;
+      margin-left: 10px;
     }
   }
   &__body{
@@ -190,7 +228,7 @@ a{
     font-size: 25px;
   }
   &:before {
-    background-color: rgba(56, 56, 56, 0.8);
+    background-color: rgba(56, 56, 56, 0.45);
     bottom: 0;
     content: "";
     left: 0;
@@ -201,7 +239,8 @@ a{
 }
 
 .crumbs {
-  margin: 12px 0;
+  margin-top: 12px;
+  margin-bottom: 34px;
   .breadcrumb {
     margin: 0;
     padding: 0;
@@ -229,7 +268,7 @@ a{
 
 .btn{
   display: inline-block;
-  padding: 4px 12px;
+  padding: 5px 12px;
   background-color: $blue;
   color: #fff;
   text-decoration: none;

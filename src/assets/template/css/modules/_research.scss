@@ -7,14 +7,27 @@
     padding: 0 15px;
     margin-bottom: 30px;
     width: 25%;
+    font-size: 16px;
     &:nth-child(1){
       width: 33.33%;
+      .posts__text{
+        //font-size: 14px;
+        //line-height: 140%;
+      }
     }
     &:nth-child(2){
       width: 33.33%;
+      .posts__text{
+        //font-size: 14px;
+        //line-height: 140%;
+      }
     }
     &:nth-child(3){
       width: 33.33%;
+      .posts__text{
+        //font-size: 14px;
+        //line-height: 140%;
+      }
     }
   }
   &__card{
@@ -27,21 +40,21 @@
     background-position: center;
   }
   &__text{
-    line-height: 120%;
-    padding: 20px;
-    font-size: 12px;
+    line-height: 125%;
+    padding: 24px 24px 20px 24px;
+    //font-size: 16px;
+    color: #333538;
   }
   &__more{
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     .btn{
-      width: 160px;
+      width: 164px;
     }
   }
   &__download{
     text-align: center;
-    margin-bottom: 8px;
-
+    margin-bottom: 27px;
   }
   &__download-link{
     display: inline-block;
@@ -49,9 +62,17 @@
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
-    width: 160px;
+    width: 164px;
     text-align: center;
-    padding: 4px 12px;
-    font-size: 12px;
+    padding: 5px 5px;
+    font-size: 14px;
+  }
+}
+.show__more{
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  .btn{
+    width: 164px;
   }
 }

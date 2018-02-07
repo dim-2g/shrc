@@ -1,0 +1,46 @@
+.article-meta{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  &__category{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $grey;
+    margin-top: 6px;
+  }
+  &__pdf{
+    font-size: 12px;
+    &.btn{
+     width: 150px;
+      //padding: 4px 30px;
+    }
+  }
+}
+.article-post{
+  max-width: 556px;
+  margin-left: auto;
+  margin-right: auto;
+  &__name{
+    font-size: 20px;
+    color: $grey;
+    margin-bottom: 24px;
+    line-height: 125%;
+  }
+  &__image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 370px;
+    margin-bottom: 24px;
+  }
+  &__content{
+    font-size: 14px;
+    color: $grey;
+    line-height: 120%;
+    margin-bottom: 56px;
+    p{
+      margin-bottom: 17px;
+    }
+  }
+}
