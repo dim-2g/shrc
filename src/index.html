@@ -16,29 +16,28 @@
 
 
 <div class="wrapper">
-    <header class="header__main">
+    <header class="header">
         <div class="container">
             <div class="header__body">
-                <div class="header__logo">
-                    <a href="/">SHRC</a>
-                </div>
+                <a href="/" class="header__logo">
+                    SHRC <span>Smart HR Consulting Company</span>
+                </a>
                 <a href="mailto:info@gmail.com" class="header__email">info@gmail.com</a>
                 <a href="tel:72842953819" class="header__phone">7 (284) 295-38-19</a>
             </div>
             <div class="header__menu">
                 <ul>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Консультационные услуги</a></li>
-                    <li><a href="#">Опросы</a></li>
-                    <li><a href="#">Исследования</a></li>
-                    <li><a href="#">Статьи</a></li>
+                    <li class="active"><a href="#">О компании</a></li><li class="sep"></li>
+                    <li><a href="#">Консультационные услуги</a></li><li class="sep"></li>
+                    <li><a href="#">Опросы</a></li><li class="sep"></li>
+                    <li><a href="#">Исследования</a></li><li class="sep"></li>
+                    <li><a href="#">Статьи</a></li><li class="sep"></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </div>
         </div>
     </header>
 
-    
 
     <div class="content">
 
@@ -59,53 +58,96 @@
 
     </div>
 
-    <footer class="footer">
-        <div class="footer__top">
-            <div class="container">
-                <div class="f-row">
-                    <div class="footer__contacts">
-                        Лого
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="f-row">
+                <div class="footer__contacts">
+                    <div class="footer__logo">
+                        SHRC
+                        <span>Smart HR Consulting</span>
                     </div>
-                    <div class="footer-menu">
-                        <div class="footer-menu__item footer-menu__item--main">
-                            <ul>
-                                <li><a href="#">О компании</a></li>
-                                <li><a href="#">Статьи</a></li>
-                                <li><a href="#">Контакты</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-menu__item footer-menu__item--nowrap">
-                            <div class="footer-menu__title"><a href="#">Консультационные услуги</a></div>
-                            <ul>
-                                <li><a href="#">Грейдинг и системы вознаграждения</a></li>
-                                <li><a href="#">Управление талантами</a></li>
-                                <li><a href="#">Развитие корпоративной культуры</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-menu__item">
-                            <div class="footer-menu__title"><a href="#">Опросы</a></div>
-                            <ul>
-                                <li><a href="#">Компексное исследование систем вознаграждений</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-menu__item">
-                            <div class="footer-menu__title"><a href="#">Исследования</a></div>
-                            <ul>
-                                <li><a href="#">Исследование практик в области развития талантов и управления карьерой</a></li>
-                            </ul>
-                        </div>
+                    <div class="footer__phone">
+                        <a href="tel:72842953819">7 (284) 295-38-19</a>
+                    </div>
+                    <div class="footer__email">
+                        <a href="mailto:info@gmail.com">info@gmail.com</a>
+                    </div>
+                    <div class="footer__private-police">
+                        <a href="#">Политика конфиденциальности персональных данных</a>
                     </div>
                 </div>
-            </div>    
-        </div>
-        <div class="footer__bottom">
-            <div class="container">
-                <div class="f-row">
-                    <div class="footer__copyright">&copy; SHRC SmartHRCondultionCompany</div>
-                    <div class="footer__dev">Разработка сайта</div>
+                <div class="footer-menu">
+                    <div class="footer-menu__item footer-menu__item--main">
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu__item footer-menu__item--nowrap">
+                        <div class="footer-menu__title"><a href="#">Консультационные услуги</a></div>
+                        <ul>
+                            <li><a href="#">Грейдинг и системы вознаграждения</a></li>
+                            <li><a href="#">Управление талантами</a></li>
+                            <li><a href="#">Развитие корпоративной культуры</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu__item">
+                        <div class="footer-menu__title"><a href="#">Опросы</a></div>
+                        <ul>
+                            <li><a href="#">Компексное исследование систем вознаграждений</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu__item">
+                        <div class="footer-menu__title"><a href="#">Исследования</a></div>
+                        <ul>
+                            <li><a href="#">Исследование практик в области развития талантов и управления карьерой</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>    
+            </div>
         </div>
-        
-    </footer>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="f-row">
+                <div class="footer__copyright">&copy; Smart HR Consulting Company Russia&CIS</div>
+                <div class="footer__dev">Разработка сайта</div>
+            </div>
+        </div>
+    </div>
+
+</footer>
 </div>
+
+
+
+
+
+<script src="assets/template/vendor/jquery-3.2.1.min.js"></script>
+<script src="assets/template/vendor/slick/slick.js"></script>
+<script src="assets/template/vendor/selectric/jquery.selectric.min.js"></script>
+<script src="assets/template/vendor/magnific-popup/magnific-popup.js"></script>
+<!--script src="assets/template/vendor/wow.min.js"></script>
+<script>
+    new WOW({
+        live: true
+    }).init();
+</script-->
+<script src="assets/template/js/scripts.js"></script>
+
+<script>
+    var $buoop = {notify:{i:-5,f:-4,o:-4,s:-2,c:-4},insecure:true,mobile:false,api:5};
+    function $buo_f(){
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+    };
+    try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+    catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+
+</body>
+</html>
