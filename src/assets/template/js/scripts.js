@@ -31,7 +31,7 @@ $(function() {
             return false;
         }
         
-        var timeout = 500;
+        var timeout = 300;
         if ($(tab+'.active').length==0) {
             timeout = 0;
         }
@@ -44,6 +44,13 @@ $(function() {
         
         return false;
     });
+
+    $(".header__burger").magnificPopup({
+        type: "inline",
+        midClick: true,
+        mainClass: 'mobile-menu'
+    });
+
 
     $('.product-big__slider').slick({
         slidesToShow: 1,
