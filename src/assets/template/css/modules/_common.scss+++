@@ -53,21 +53,12 @@ a{
     background: #0d2b5d;
     .f-row{
       display: flex;
-      justify-content: space-around;    
-      @media($bp-larger-than-desktop){
-        justify-content: space-between;     
-      }
     }
   }
   &__contacts{
-    width: 100%;
+    width: 300px;
     flex-shrink: 0;
     padding-right: 30px;
-    text-align: center;
-    @media($bp-larger-than-phablet){
-      width: 300px;
-      text-align: left;
-    }
   }
   &__menu{
     flex: 1;
@@ -76,28 +67,8 @@ a{
     background: #0d3272;
     padding: 15px 0;
     .f-row{
-      text-align: center;
       display: flex;
-      flex-direction: column;
-      @media($bp-larger-than-phablet){
-        flex-direction: row;  
-        justify-content: space-between;     
-        text-align: left; 
-      }
-    }
-  }
-  &__dev{
-    order: 0;
-    margin-bottom: 6px;
-    @media($bp-larger-than-phablet){
-      order: 1;
-      margin: 0;
-    }
-  }
-  &__copyright{
-    order: 1;
-    @media($bp-larger-than-phablet){
-      order: 0;
+      justify-content: space-between;      
     }
   }
   &__logo{
@@ -120,7 +91,7 @@ a{
     margin-bottom: 24px;
     font-weight: bold;
     padding-left: 27px;
-    position: relative;
+
     &:before{
       content: "";
       display: inline-block;
@@ -130,22 +101,16 @@ a{
     }
   }
   &__private-police{
-    margin-bottom: 12px;  
+    margin-bottom: 24px;
     font-weight: bold;
     font-size: 14px;
     line-height: 120%;
-    @media($bp-larger-than-phablet){
-      margin-bottom: 24px;  
-    }
   }
 }
 .footer-menu{
-  display: none;
-  @media($bp-larger-than-phablet){
-    display: flex;
-    justify-content: space-between;
-    margin-top: 12px;
-  }
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
   ul{
     margin: 0;
     padding: 0;
@@ -158,10 +123,6 @@ a{
   }
   &__item{
     padding-right: 50px;
-    display: none;
-    @media($bp-larger-than-desktop){
-      display: block;
-    }
     &:last-child{
       padding-right: 0;
     }
@@ -169,7 +130,6 @@ a{
       width: 230px;
       flex-shrink: 0;
       padding: 0px 10px 10px 50px;
-      display: block;
       ul {
         li {
           text-transform: uppercase;
@@ -194,12 +154,8 @@ a{
 }
 
 .header{
-  padding-top: 8px;
-  padding-bottom: 4px;
-  @media($bp-larger-than-phablet){
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+  padding-top: 10px;
+  padding-bottom: 10px;
   a{
     text-decoration: none;
   }
@@ -208,71 +164,28 @@ a{
     text-decoration: none;
     color: $blue;
     font-weight: bold;
-    font-size: 27px;
-    order: 0;
-    line-height: 24px;
-    @media($bp-larger-than-phablet){
-      font-size: 30px;
-    }
+    font-size: 30px;
     span{
-      white-space: nowrap;
       font-weight: normal;
-      font-size: 15px;
-      margin-left: 0;
-      @media($bp-larger-than-phablet){
-        font-size: 18px;
-        margin-left: 10px;
-      }
+      font-size: 18px;
+      margin-left: 12px;
     }
   }
   &__body{
     display: flex;
     align-items: baseline;
     margin-bottom: 8px;
-    flex-direction: column;
-    @media($bp-larger-than-tablet){
-      flex-direction: row;
-    }
   }
   &__email{
     font-size: 14px;
-    align-self: flex-end;
-    position: relative;
-    order: 2;
-    @media($bp-larger-than-phablet) {
-      order: 1;
-    }
-    @media($bp-larger-than-tablet){
-      align-self: baseline;
-      margin-right: 30px;
-    }
-    &:before{
-      content: "";
-      display: inline-block;
-      @include sprite($email);
-      top: 0;
-      left: 0;
-    }
+    margin-right: 30px;
   }
   &__phone{
-    font-size: 19px;
-    line-height: 28px;
-    align-self: flex-end;
-    order: 1;
-    @media($bp-larger-than-phablet) {
-      font-size: 20px;
-      order: 2;
-    }
-    @media($bp-larger-than-tablet){
-      align-self: baseline;
-    }
+    font-size: 20px;
+    margin-right: 10px;
   }
   &__menu{
-    margin-bottom: 20px;
-    display: none;
-    @media($bp-larger-than-tablet){
-      display: block;
-    }
+    margin-bottom: 14px;
     ul{
       padding: 0;
       margin: 0;
@@ -298,54 +211,12 @@ a{
     a{
       font-size: 14px;
       text-transform: uppercase;
-      color: #000;
+      color: $grey;
       transition: $anim;
       &:hover{
         color: $blue;
       }
     }
-  }
-  &__burger{
-    width: 25px;
-    position: absolute;
-    height: 30px;
-    top: 32px;
-    left: 15px;
-    display: inline-block;
-    @media($bp-larger-than-tablet){
-      display: none;
-    }
-    span{
-      height: 2px;
-      margin: 10px 0;
-      width: 100%;
-      display: inline-block;
-      background-color: $blue;
-      position: absolute;
-      top: 0;
-      &:before{
-        width: 25px;
-        position: absolute;
-        height: 2px;
-        left: 0;
-        top: -7px;
-        content: "";
-        display: inline-block;
-        background-color: $blue;
-      }
-      &:after{
-        width: 25px;
-        position: absolute;
-        height: 2px;
-        left: 0;
-        bottom: -7px;
-        content: "";
-        display: inline-block;
-        background-color: $blue;
-      }    
-    }
-    
-
   }
 }
 
@@ -378,7 +249,8 @@ a{
 
 .crumbs {
   margin-top: 12px;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
+  color: #828282;
   .breadcrumb {
     margin: 0;
     padding: 0;
@@ -390,6 +262,7 @@ a{
     a{
       text-decoration: none;
       font-size: 12px;
+      color: #828282;
     }
     > li + li::before {
       content: "/";
@@ -413,44 +286,4 @@ a{
   text-transform: uppercase;
   text-align: center;
   font-size: 14px;
-}
-.btn-o{
-  display: inline-block;
-  padding: 5px 12px;
-  border-color: $blue;
-  color: $blue;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 14px;
-}
-
-.btn-white{
-  display: inline-block;
-  padding: 5px 12px;
-  background-color: #fff;
-  color: #17428c;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 14px;
-  line-height: 14px;
-}
-
-.mobile-menu{
-  #topmenu{
-    margin: 50px 0 50px 20px;
-    li.sep{
-      display: none;
-    }
-    a{
-      color: #fff;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 16px;
-    }
-  }
-  .mfp-close{
-    color: #fff;
-  }
 }

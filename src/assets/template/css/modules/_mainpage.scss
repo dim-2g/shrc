@@ -1,8 +1,15 @@
 .main-slider{
-    height: 534px;
-    
+    *{
+        font-size: 0;
+    }
     img{
         line-height: 0;
+    }
+    &__item{
+        height: 261px;
+        @media($bp-larger-than-tablet){
+            height: 534px;
+        }
     }
     &__content{
         position: absolute;
@@ -10,42 +17,64 @@
         left: 0;
         right: 0;
         bottom: 0;
+        padding-left: 32px;
+        padding-right: 32px;
         .container{
             height: 100%;
             display: flex;
-            padding-left: 8.33%;
+            padding-left: 6%;
+            padding-top: 26px;
+            padding-bottom: 26px;
             align-items: center;
+            //@media($bp-larger-than-tablet){
+            //    align-items: center;
+            //}
         }
     }
     &__info{
         max-width: 600px;
         color: #fff;
-
+        margin-bottom: 38px;
+        @media($bp-larger-than-tablet) {
+            margin-bottom: 35px;
+        }
     }
     &__header{
         text-transform: uppercase;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: bold;
-        line-height: 130%;
+        line-height: 120%;
         margin-bottom: 10px;
         @media($bp-larger-than-tablet){
             font-size: 38px;
+            line-height: 130%;
+            margin-bottom: 14px;
         }
     }
     &__intro{
-        font-size: 14px;
-        margin-bottom: 30px;
+        font-size: 12px;
+        margin-bottom: 28px;
         max-width: 400px;
+        line-height: 120%;
+        @media($bp-larger-than-tablet){
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
     }
     &__more{
         color: #b20d25;
         background-color: #fff;
         text-align: center;
         text-transform: uppercase;
-        padding: 12px 30px;
+        padding: 5px 30px;
         display: inline-block;
         text-decoration: none;
         transition: $anim;
+        font-size: 12px;
+        @media($bp-larger-than-tablet){
+            font-size: 15px;
+            padding: 12px 30px;
+        }
         &:hover{
             color: #fff;
             background-color: #b20d25;
@@ -58,13 +87,17 @@
         height: 20px;
         color: transparent;
         position: absolute;
+        display: none;
+        @media($bp-larger-than-tablet){
+            display: block;
+        }
         &.slick-prev{
-            top: 50%;
+            top: 45%;
             margin-top: -10px;
             left: 10px;
         }
         &.slick-next{
-            top: 50%;
+            top: 45%;
             margin-top: -10px;
             right: 10px;
             transform: rotate(180deg);
@@ -72,7 +105,7 @@
         &:before{
             content: "";
             display: inline-block;
-            width: 17px;
+            width: 15px;
             height: 2px;
             position: absolute;
             background: #fff;
@@ -84,7 +117,7 @@
         &:after{
             content: "";
             display: inline-block;
-            width: 17px;
+            width: 15px;
             height: 2px;
             position: absolute;
             background: #fff;
@@ -96,13 +129,16 @@
     }
     .slick-dots {
         position: absolute;
-        bottom: 50px;
+        bottom: 16px;
         display: block;
         width: 100%;
         padding: 0;
         margin: 0;
         list-style: none;
         text-align: center;
+        @media($bp-larger-than-tablet){
+            bottom: 50px;
+        }
         li {
             position: relative;
             display: inline-block;
@@ -115,24 +151,32 @@
                 font-size: 0;
                 line-height: 0;
                 display: block;
-                width: 20px;
-                height: 20px;
+                width: 7px;
+                height: 7px;
                 padding: 5px;
                 cursor: pointer;
                 color: transparent;
                 border: 0;
                 outline: none;
                 background: transparent;
+                @media($bp-larger-than-tablet){
+                    width: 20px;
+                    height: 20px;
+                }
                 &:before {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    width: 10px;
-                    height: 10px;
+                    width: 7px;
+                    height: 7px;
                     content: '';
                     text-align: center;
                     background-color: #fff;
                     border: 1px solid #b20d25;
+                    @media($bp-larger-than-tablet){
+                        width: 10px;
+                        height: 10px;
+                    }
                 }
             }
             &.slick-active{
@@ -166,7 +210,7 @@
     }
     &__item{
         border-top: 1px solid #fff;
-        padding: 30px 20px;
+        padding: 33px 20px 40px;
         text-align: center;
         flex: 1;
         @media($bp-larger-than-tablet){
@@ -221,7 +265,7 @@
         text-transform: uppercase;
         font-size: 16px;
         font-weight: bold;
-        margin-bottom: 12px;
+        margin-bottom: 20px;
     }
     &__tooltip{
         position: absolute;
@@ -240,9 +284,11 @@
         border-top: 1px solid #fff;
         border-right: 1px solid #fff;
         border-left: 1px solid #fff;
+        font-size: 12px;
         @media($bp-larger-than-tablet){
             height: 280px; 
-            transition: all .2s cubic-bezier(.86,0,.07,1);   
+            transition: all .2s cubic-bezier(.86,0,.07,1);
+            font-size: 14px;
         }
         @media (min-width: 1080px) {
             height: 230px;
@@ -315,10 +361,19 @@
             }
         }
     }
+    &__more-btn{
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 6px 38px 2px;
+        &:hover{
+            color: $blue;
+            background-color: #fff;
+        }
+    }
 }
 
 .main-news{
-    padding: 65px 0 25px;
+    padding: 58px 0 25px;
     &__header-line{
         display: flex;
         justify-content: space-between;

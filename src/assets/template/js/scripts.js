@@ -9,7 +9,7 @@ $(function() {
         fade: true,
         responsive: [
             {
-                breakpoint: 750,
+                breakpoint: 550,
                 settings: {
                     arrows: false
                 }

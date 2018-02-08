@@ -1,0 +1,55 @@
+.remuneration{
+  &__list{
+
+  }
+  &__item{
+    display: flex;
+
+  }
+  &__card{
+    width: 50%;
+    position: relative;
+  }
+  &__image{
+    height: 254px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    &:before {
+      background-color: rgba(33, 42, 65, 0.5);
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+   text-align: center;
+  }
+  &__info-box{
+    max-width: 300px;
+  }
+  &__name{
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  &__text{
+    width: 50%;
+    border-bottom: 1px solid $blue;
+    border-right: 1px solid $blue;
+    border-top: 1px solid $blue;
+  }
+}
