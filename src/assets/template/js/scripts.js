@@ -1,4 +1,50 @@
 $(function() {
+
+    var main_slider = $('.main-slider');
+    main_slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        fade: true,
+        responsive: [
+            {
+                breakpoint: 750,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
+    });
+    $('.slick-prev', main_slider).on('click', function(){
+        main_slider.slick('slickPrev');
+    });
+    $('.slick-next', main_slider).on('click', function(){
+        main_slider.slick('slickNext');
+    });
+
+    $('.main-service__more-btn').click(function(){
+        var _this = $(this);
+        var tab = ".main-service__item";
+        if (_this.parents(tab).hasClass('active')) {
+            _this.parents(tab).removeClass('active');
+            return false;
+        }
+        
+        var timeout = 500;
+        if ($(tab+'.active').length==0) {
+            timeout = 0;
+        }
+
+        $(tab).removeClass('active');
+
+        setTimeout(function(){
+            _this.parents(tab).addClass('active'); 
+        }, timeout);    
+        
+        return false;
+    });
+
     $('.product-big__slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -47,38 +93,6 @@ $(function() {
         type  : 'image'
     });
 
-    $(".incrementer .minus").on("click", function (e) {
-        e.preventDefault();
-        var input = $(this).parents(".incrementer").find(".js_zcount");
-        var input_val = parseInt( input.val() );
-
-        if(input_val > 1){
-            input_val--;
-            input.attr("data-current", input_val);
-            input.val(input_val);
-        }
-        if (input.hasClass('count_live')) {
-            input.parents('form').submit();    
-        }
-    });
-
-    $(".incrementer .plus").on("click", function (e) {
-        e.preventDefault();
-        var input = $(this).parents(".incrementer").find(".js_zcount");
-        var input_val = parseInt( input.val() );
-
-        if(input_val < 999){
-            input_val++;
-            input.attr("data-current", input_val);
-            input.val(input_val);
-        }
-
-
-        if (input.hasClass('count_live')) {
-            input.parents('form').submit();    
-        }
-    });
-
     $('.product-big__slider').magnificPopup({
         delegate: 'a',
         type: 'image',
@@ -91,27 +105,10 @@ $(function() {
             enabled:true
         }
     });
-    $('.scrollto').click(function(){
-        var id = $(this).attr('href');
-        if ($(id).length>0){
-            $('html,body').animate({ scrollTop: $(id).offset().top }, 1200);
-        }
-        return false;
-    })
-    moveto('body.product-page .product__title', '.product__buy', '.product__slider', 750);
+    
 });
 
 $(window).resize(function(){
-    moveto('body.product-page .product__title', '.product__buy', '.product__slider', 750);
+//    moveto('body.product-page .product__title', '.product__buy', '.product__slider', 750);
 });
 
-function moveto(elem, after_from, after_to, breakpoint){
-    if (elem.length==0) return;
-
-    if ($(window).width()<breakpoint){
-        $(elem).prependTo(after_to);
-    }else{
-        $(elem).prependTo(after_from);
-    }
-
-}
