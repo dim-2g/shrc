@@ -51,6 +51,29 @@ $(function() {
         mainClass: 'mobile-menu'
     });
 
+    auth = function() {
+        if ($('.auth-form').length) {
+            $.magnificPopup.open({
+                items: {
+                    src: '.auth-form'
+                },
+                type: 'inline'
+            });
+        }
+        return false;
+    }
+    $('.polls__start a').click(function(){
+        auth();
+    });
+
+    $('.auth-form__toggle-password').click(function(){
+        input_password = $('.auth-form__password input');
+        if (input_password.attr('type')=="password"){
+            input_password.attr('type', 'text');
+        } else {
+            input_password.attr('type', 'password');
+        }
+    });
 
     $('.product-big__slider').slick({
         slidesToShow: 1,

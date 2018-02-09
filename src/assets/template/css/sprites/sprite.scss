@@ -31,6 +31,17 @@ $email-total-width: 54px;
 $email-total-height: 38px;
 $email-image: '/assets/template/css/sprites/sprite.png';
 $email: (0px, 24px, 0px, -24px, 18px, 14px, 54px, 38px, '/assets/template/css/sprites/sprite.png', 'email', );
+$eye-name: 'eye';
+$eye-x: 18px;
+$eye-y: 24px;
+$eye-offset-x: -18px;
+$eye-offset-y: -24px;
+$eye-width: 18px;
+$eye-height: 12px;
+$eye-total-width: 54px;
+$eye-total-height: 38px;
+$eye-image: '/assets/template/css/sprites/sprite.png';
+$eye: (18px, 24px, -18px, -24px, 18px, 12px, 54px, 38px, '/assets/template/css/sprites/sprite.png', 'eye', );
 $marker-gray-name: 'marker-gray';
 $marker-gray-x: 0px;
 $marker-gray-y: 0px;
@@ -56,7 +67,7 @@ $search: (19px, 0px, -19px, 0px, 17px, 17px, 54px, 38px, '/assets/template/css/s
 $spritesheet-width: 54px;
 $spritesheet-height: 38px;
 $spritesheet-image: '/assets/template/css/sprites/sprite.png';
-$spritesheet-sprites: ($email-gray, $email, $marker-gray, $search, );
+$spritesheet-sprites: ($email-gray, $email, $eye, $marker-gray, $search, );
 $spritesheet: (54px, 38px, '/assets/template/css/sprites/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
