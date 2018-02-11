@@ -1,17 +1,52 @@
 .poll-page{
-    display: flex;
-    justify-content: space-between;
+
+    @media($bp-larger-than-desktop) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+///        align-items: center;
+    }
+    @media($bp-larger-than-1170){
+        flex-wrap: nowrap;
+    }
     &__company{
-        text-align: right;
-        width: 294px;
-        flex-shrink: 0;
-        padding: 0 0 0 30px;
+        text-align: center;
         line-height: 110%;
+        order: 2;
+        margin-bottom: 30px;
+        max-width: 552px;
+        margin-left: auto;
+        margin-right: auto;
+        @media($bp-larger-than-desktop){
+            text-align: right;
+            width: 294px;
+            flex-shrink: 0;
+            padding: 0 0 0 30px;
+            order: 5;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @media($bp-larger-than-1170){
+           // order: 5;
+            width: 294px;
+        }
     }
     &__steps{
-        width: 294px;
-        flex-shrink: 0;
-        padding: 0 30px 0 0;
+        margin-bottom: 30px;
+        order: 1;
+        text-align: center;
+        @media($bp-larger-than-tablet) {
+            text-align: left;
+            width: 50%;
+            flex-shrink: 0;
+            padding: 0 30px 0 0;
+        }
+        display: none;
+        @media($bp-larger-than-1170){
+            display: block;
+            width: 294px;
+        }
+
     }
     &__time{
         color: $blue;
@@ -21,6 +56,14 @@
     }
     &__issue{
         flex: 1;
+        order: 3;
+        max-width: 552px;
+        margin-left: auto;
+        margin-right: auto;
+        @media($bp-larger-than-desktop){
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
     &__name{
         color: #333538;
@@ -34,12 +77,178 @@
         color: #fff;
         padding: 14px 18px;
         line-height: 110%;
+        margin-bottom: 28px;
     }
+    &__for-user{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        line-height: 120%;
+    }
+    &__instruction{
+        border: 1px solid $blue;
+        padding: 25px 20px;
+        line-height: 120%;
+        margin-bottom: 42px;
+    }
+    &__instruction-header{
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__item{
+        margin-bottom: 35px;
+    }
+    &__question{
+        margin-bottom: 16px;
+        line-height: 150%;
+    }
+    &__answer{
+        margin-bottom: 15px;
+    }
+    .red{
+        color: red;
+    }
+    &__answer{
+        label{
+            display: flex;
+        }
+    }
+    .label{
+        margin-right: 10px;
+    }
+    .checkbox-custom{
+        margin-right: 10px;
+    }
+    .radio-custom{
+        margin-right: 10px;
+    }
+    &__table{
+        overflow: auto;
+        width: 100%;
+        @media($bp-larger-than-tablet){
+            overflow-x: visible;
+        }
+        td{
+            border: 0 none;
+            text-align: center;
+            &:first-child{
+                text-align: left;
+                min-width: 145px;
+            }
+        }
+    }
+    &__controls{
+        position: relative;
+        margin-top: 72px;
+    }
+    &__nav{
+        margin-left: auto;
+        margin-right: auto;
+        width: 186px;
+        margin-bottom: 30px;
+        .btn{
+            width: 86px;
+            height: 33px;
+            border: 1px solid #000;
+            margin: 0 2px;
+        }
+    }
+    &__prev{
+        position: relative;
+        &:before{
+            content: "";
+            display: inline-block;
+            top: 50%;
+            left: 35px;
+            @include sprite($arrow-left);
+        }
+    }
+    &__next{
+        position: relative;
+        &:before{
+            content: "";
+            display: inline-block;
+            top: 50%;
+            left: 35px;
+            @include sprite($arrow-right);
+        }
+    }
+    &__submit{
+        text-align: center;
+        @media($bp-larger-than-tablet){
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .btn{
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+    &__steps-inside{
+        display: block;
+        @media($bp-larger-than-1170){
+            display: none;
+        }
+        .step-box{
+            width: 100%;
+        }
+    }
+}
+.answer{
+    &__opinion{
+        border: 0 none;
+        border-bottom: 1px solid $blue;
+        color: $blue;
+        font-size: 14px;
+        width: 100%;
+        height: 24px;
+        line-height: 24px;
+        background-color: #fff;
+    }
+    &__textarea-box{
+        position: relative;
+        width: 100%;
+        height: 24px;
+    }
+    &__textarea{
+        border: 0 none;
+        border-bottom: 1px solid $blue;
+        font-size: 14px;
+        width: 100%;
+        height: 24px;
+        line-height: 24px;
+        background-color: #fff;
+        resize: none;
+        position: absolute;
+        overflow: hidden;
+        left: 0;
+        bottom: 0;
+        color: #333538;
+        &:focus{
+            height: 80px;
+            width: 254px;
+            border: 1px solid #e8e8e8;
+            border-radius: 2px;
+            padding: 12px;
+            z-index: 25;
+        }
+    }
+
+
 }
 .step-box{
     padding: 16px 8px 26px;
     width: 165px;
     border: 1px solid #d1d1d1;
+    margin-left: auto;
+    margin-right: auto;
+    @media($bp-larger-than-tablet) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     &__count{
         text-align: center;
         color: #333538;

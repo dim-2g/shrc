@@ -75,42 +75,51 @@ $(function() {
         }
     });
 
-    $('.product-big__slider').slick({
+
+
+
+
+    var news_slider = $('.main-news__list');
+
+    news_slider.slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
         fade: true,
-        asNavFor: '.product-small__slider',
+        adaptiveHeight: true,
         responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick"
+            },
             {
                 breakpoint: 750,
                 settings: {
-                    arrows: false
+                    arrows: true
                 }
             }
         ]
     });
 
-    $('.product-small__slider').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        asNavFor: '.product-big__slider',
-        dots: false,
-        arrows: true,
-        centerPadding: '0px',
-        centerMode: false,
-        focusOnSelect: true,
-        adaptiveHeight: true,
-        responsive: [
-            {
-                breakpoint: 1050,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 3
-                }
+    initSlider = function() {
+        $('title').html($(window).width());
+
+
+        if($(window).width() > 750) {
+            if (news_slider.hasClass('slick-initialized')) {
+                news_slider.slick('unslick');
             }
-        ]
-    });
+        }else{
+            $('.main-news__list').slick('reinit');
+        }
+
+
+
+
+    }
+
+//    initSlider();
+
 
 
 
@@ -138,7 +147,13 @@ $(function() {
     
 });
 
-$(window).resize(function(){
-//    moveto('body.product-page .product__title', '.product__buy', '.product__slider', 750);
+$(".btn-up").on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, 1500);
 });
 
+$(window).resize(function(){
+//    moveto('body.product-page .product__title', '.product__buy', '.product__slider', 750);
+    initSlider();
+    //$('.main-news__list').slick('reinit');
+});

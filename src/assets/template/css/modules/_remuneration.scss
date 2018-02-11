@@ -1,10 +1,40 @@
 .remuneration{
   &__list{
-
+  margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
   }
   &__item{
     display: flex;
-
+    margin-bottom: 30px;
+    &--right{
+      .remuneration__card{
+         order: 1;
+      }
+      .remuneration__text{
+         order: 0;
+        border-right: none;
+        border-left: 1px solid $blue;
+      }
+    }
+    &--down{
+      flex-direction: column;
+      width: 48%;
+      .remuneration__card{
+        width: 100%;
+      }
+      .remuneration__text{
+        width: 100%;
+        border-top: none;
+        border-left: 1px solid $blue;
+        padding-top: 28px;
+        padding-left: 28px;
+        padding-bottom: 20px;
+      }
+      + .remuneration__item--down{
+        margin-left: 4%;
+      }
+    }
   }
   &__card{
     width: 50%;
@@ -36,20 +66,192 @@
     right: 0;
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 15px;
    text-align: center;
   }
   &__info-box{
-    max-width: 300px;
+    max-width: 352px;
   }
   &__name{
     font-size: 24px;
     font-weight: bold;
     color: #fff;
+    margin-bottom: 18px;
+    line-height: 125%;
   }
   &__text{
     width: 50%;
     border-bottom: 1px solid $blue;
     border-right: 1px solid $blue;
     border-top: 1px solid $blue;
+    padding-top: 46px;
+    padding-left: 30px;
+    padding-right: 24px;
+    line-height: 135%;
+  }
+  &__order{
+    display: inline-block;
+    background-color: #fff;
+    color: $blue;
+    padding: 4px 44px 4px;
+    &:hover{
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+  a{
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+.management{
+  &__list{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+  &__item{
+    display: flex;
+    margin-bottom: 30px;
+    &--right{
+      .management__card{
+        order: 1;
+      }
+      .management__text{
+        order: 0;
+        border-right: none;
+        border-left: 1px solid $blue;
+      }
+    }
+    &--down{
+      flex-direction: column;
+      width: 48%;
+      .management__card{
+        width: 100%;
+      }
+      .management__text{
+        width: 100%;
+        border-top: none;
+        border-left: 1px solid $blue;
+        padding-top: 28px;
+        padding-left: 28px;
+        padding-bottom: 20px;
+      }
+      + .management__item--down{
+        margin-left: 4%;
+      }
+    }
+  }
+  &__card{
+    width: 50%;
+    position: relative;
+  }
+  &__image{
+    height: 254px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    &:before {
+      background-color: rgba(33, 42, 65, 0.5);
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    text-align: center;
+  }
+  &__info-box{
+    max-width: 352px;
+  }
+  &__name{
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 18px;
+    line-height: 125%;
+  }
+  &__text{
+    width: 50%;
+    border-bottom: 1px solid $blue;
+    border-right: 1px solid $blue;
+    border-top: 1px solid $blue;
+    padding-top: 46px;
+    padding-left: 30px;
+    padding-right: 24px;
+    line-height: 135%;
+  }
+  &__order{
+    display: inline-block;
+    background-color: #fff;
+    color: $blue;
+    padding: 4px 44px 4px;
+    &:hover{
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+  a{
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+.forma-feedback {
+  min-height: 284px;
+  padding: 36px 0;
+  &__box{
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__header {
+    font-weight: bold;
+    font-size: 24px;
+    color: $grey;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  input[type="text"] {
+    border: 1px solid #17428c;
+    background-color: #FFF;
+    height: 28px;
+    width: 210px;
+    line-height: 27px;
+    color: $blue;
+    margin-left: 12px;
+    margin-right: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .btn {
+    display: block;
+    border: 0 none;
+    height: 34px;
+    width: 210px;
+    margin-top: 30px;
+    line-height: 27px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__consent{
+    text-align: center;
+    font-size: 14px;
+    color: $grey;
   }
 }

@@ -1,5 +1,6 @@
 body{
-  color: #4c4c4c;
+  color: $grey;
+  font-size: 14px;
 }
 a{
   color: $blue;
@@ -49,8 +50,12 @@ a{
     }
   }
   &__top{
-    padding: 28px 0 8px;
+    padding: 13px 0 8px;
     background: #0d2b5d;
+    position: relative;
+    @media($bp-larger-than-mobile) {
+      padding: 28px 0 8px;
+    }
     .f-row{
       display: flex;
       justify-content: space-around;    
@@ -62,11 +67,11 @@ a{
   &__contacts{
     width: 100%;
     flex-shrink: 0;
-    padding-right: 30px;
     text-align: center;
     @media($bp-larger-than-phablet){
       width: 300px;
       text-align: left;
+      padding-right: 30px;
     }
   }
   &__menu{
@@ -88,8 +93,9 @@ a{
   }
   &__dev{
     order: 0;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
     @media($bp-larger-than-phablet){
+      margin-bottom: 6px;
       order: 1;
       margin: 0;
     }
@@ -104,38 +110,58 @@ a{
     font-weight: bold;
     font-size: 28px;
     line-height: 120%;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
+    @media($bp-larger-than-phablet){
+      margin-bottom: 12px;
+    }
     span{
       font-weight: normal;
       font-size: 17px;
     }
   }
   &__phone{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
-    margin-bottom: 1px;
+    margin-bottom: 3px;
+    @media($bp-larger-than-phablet){
+      font-size: 18px;
+      margin-bottom: 1px;
+    }
   }
   &__email{
-    font-size: 14px;
-    margin-bottom: 24px;
+    font-size: 12px;
+    margin-bottom: 21px;
     font-weight: bold;
     padding-left: 27px;
     position: relative;
+    @media($bp-larger-than-phablet){
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
     &:before{
       content: "";
       display: inline-block;
-      @include sprite($email);
-      top: 0;
-      left: 0;
+      @include sprite($email-footer);
+      top: 3px;
+      margin-left: -27px;
+      position: absolute;
+      @media($bp-larger-than-phablet){
+        top: 5px;
+      }
     }
   }
   &__private-police{
     margin-bottom: 12px;  
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
     line-height: 120%;
     @media($bp-larger-than-phablet){
-      margin-bottom: 24px;  
+      margin-bottom: 24px;
+      font-size: 14px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
@@ -197,7 +223,7 @@ a{
   padding-top: 8px;
   padding-bottom: 4px;
   @media($bp-larger-than-phablet){
-    padding-top: 10px;
+    padding-top: 24px;
     padding-bottom: 10px;
   }
   a{
@@ -228,19 +254,25 @@ a{
   &__body{
     display: flex;
     align-items: baseline;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     flex-direction: column;
+    @media($bp-larger-than-phablet){
+      margin-bottom: 18px;
+    }
     @media($bp-larger-than-tablet){
       flex-direction: row;
     }
   }
   &__email{
-    font-size: 14px;
+    font-size: 12px;
     align-self: flex-end;
     position: relative;
     order: 2;
+    padding-left: 24px;
     @media($bp-larger-than-phablet) {
       order: 1;
+      font-size: 14px;
+
     }
     @media($bp-larger-than-tablet){
       align-self: baseline;
@@ -250,8 +282,15 @@ a{
       content: "";
       display: inline-block;
       @include sprite($email);
-      top: 0;
-      left: 0;
+      top: 2px;
+      left: 5px;
+      position: absolute;
+      transform: scale(0.75);
+      @media($bp-larger-than-phablet) {
+        transform: scale(1);
+        top: 5px;
+        left: 0;
+      }
     }
   }
   &__phone{
@@ -259,16 +298,19 @@ a{
     line-height: 28px;
     align-self: flex-end;
     order: 1;
+    font-weight: bold;
+    letter-spacing: -0.5px;
     @media($bp-larger-than-phablet) {
       font-size: 20px;
       order: 2;
+      letter-spacing: 0.5px;
     }
     @media($bp-larger-than-tablet){
       align-self: baseline;
     }
   }
   &__menu{
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     display: none;
     @media($bp-larger-than-tablet){
       display: block;
@@ -283,10 +325,15 @@ a{
     li{
       margin: 0;
       padding: 0;
+      color: $grey;
       &.sep{
         &:before{
-          content: "|";
+          content: "";
+          height: 24px;
+          width: 1px;
+          background-color: $grey;
           display: inline-block;
+
         }
       }
       &.active{
@@ -298,7 +345,7 @@ a{
     a{
       font-size: 14px;
       text-transform: uppercase;
-      color: #000;
+      color: $grey;
       transition: $anim;
       &:hover{
         color: $blue;
@@ -354,16 +401,23 @@ a{
   color: #fff;
   text-transform: uppercase;
   text-align: center;
-  min-height: 140px;
+  min-height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  @media($bp-larger-than-tablet){
+    min-height: 140px;
+  }
   &__inner{
     position: relative;
     z-index: 2;
     line-height: 100%;
     display: inline-block;
-    font-size: 25px;
+    font-size: 14px;
+    @media($bp-larger-than-tablet){
+      font-size: 25px;
+    }
   }
   &:before {
     background-color: rgba(56, 56, 56, 0.45);
@@ -383,6 +437,7 @@ a{
     margin: 0;
     padding: 0;
     font-size: 12px;
+    color: #828282;
     li {
       display: inline-block;
       margin-bottom: 0;
@@ -390,6 +445,7 @@ a{
     a{
       text-decoration: none;
       font-size: 12px;
+      color: #828282;
     }
     > li + li::before {
       content: "/";
@@ -413,6 +469,7 @@ a{
   text-transform: uppercase;
   text-align: center;
   font-size: 14px;
+  border: 0 none;
 }
 .btn-o{
   display: inline-block;
@@ -452,5 +509,83 @@ a{
   }
   .mfp-close{
     color: #fff;
+  }
+}
+
+
+
+.checkbox,
+.radio {
+  display: none;
+}
+.checkbox-custom,
+.radio-custom {
+  width: 16px;
+  height: 16px;
+  border: 1px solid $blue;
+  border-radius: 2px;
+  position: relative;
+  margin-right: 5px;
+}
+.checkbox-custom,
+.radio-custom,
+.label {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.radio:checked + .radio-custom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  left: 3px;
+  background: $blue;
+  border-radius: 2px;
+}
+.checkbox:checked + .checkbox-custom::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  @include sprite($check);
+}
+.radio-custom,
+.radio:checked + .radio-custom::before {
+  border-radius: 50%;
+}
+input[disabled="disabled"]{
+  +.radio-custom{
+    background-color: #e8e8e8;
+    border-color: #b0b0b0;
+    +.label{
+      color: #828282;
+    }
+  }
+  +.checkbox-custom{
+    background-color: #e8e8e8;
+    border-color: #b0b0b0;
+    +.label{
+      color: #828282;
+    }
+  }
+}
+
+.btn-up{
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  cursor: pointer;
+  display: none;
+  @media($bp-larger-than-mobile) {
+    display: block;
+  }
+  &:before{
+    content: "";
+    display: inline-block;
+    @include sprite($up);
   }
 }
