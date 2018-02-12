@@ -237,6 +237,7 @@ a{
     font-size: 27px;
     order: 0;
     line-height: 24px;
+    white-space: nowrap;
     @media($bp-larger-than-phablet){
       font-size: 30px;
     }
@@ -282,14 +283,14 @@ a{
       content: "";
       display: inline-block;
       @include sprite($email);
-      top: 2px;
+      top: 4px;
       left: 5px;
       position: absolute;
-      transform: scale(0.75);
+      @include sprite($email-mobile);
       @media($bp-larger-than-phablet) {
-        transform: scale(1);
         top: 5px;
         left: 0;
+        @include sprite($email);
       }
     }
   }
@@ -431,20 +432,26 @@ a{
 }
 
 .crumbs {
-  margin-top: 12px;
-  margin-bottom: 34px;
+  margin-top: 5px;
+  margin-bottom: 14px;
+  @media($bp-larger-than-phablet){
+    margin-top: 12px;
+    margin-bottom: 30px;  
+  }
   .breadcrumb {
     margin: 0;
     padding: 0;
-    font-size: 12px;
+    font-size: 11px;
     color: #828282;
+    @media($bp-larger-than-phablet){
+      font-size: 14px;  
+    }
     li {
       display: inline-block;
       margin-bottom: 0;
     }
     a{
       text-decoration: none;
-      font-size: 12px;
       color: #828282;
     }
     > li + li::before {
@@ -469,7 +476,13 @@ a{
   text-transform: uppercase;
   text-align: center;
   font-size: 14px;
-  border: 0 none;
+  border: 1px solid transparent;
+  transition: $anim;
+  &:hover{
+    background-color: #fff;
+    border: 1px solid $blue;
+    color: $blue;
+  }
 }
 .btn-o{
   display: inline-block;

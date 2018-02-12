@@ -101,8 +101,52 @@ $(function() {
         ]
     });
 
+    var remuneration_list = $('.remuneration__list');
+    remuneration_list.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    arrows: true
+                }
+            }
+        ]
+    });
+
+
+    var management_list = $('.management__list');
+    management_list.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    arrows: true
+                }
+            }
+        ]
+    });
+
+
     initSlider = function() {
-        $('title').html($(window).width());
+        //$('title').html($(window).width());
 
 
         if($(window).width() > 750) {
@@ -113,10 +157,21 @@ $(function() {
             $('.main-news__list').slick('reinit');
         }
 
-
-
-
     }
+
+
+    $(document).on('click', '.remuneration__toggle', function() {
+        item = $(this).parents('.management__item,.remuneration__item');
+        if (item.hasClass('open')){
+            item.removeClass('open');
+        } else {
+            item.addClass('open');
+        }
+
+        return false;
+    });
+
+    
 
 //    initSlider();
 

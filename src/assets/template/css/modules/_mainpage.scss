@@ -95,12 +95,14 @@
             top: 45%;
             margin-top: -10px;
             left: 10px;
+            outline: none;
         }
         &.slick-next{
             top: 45%;
             margin-top: -10px;
             right: 10px;
             transform: rotate(180deg);
+            outline: none;
         }
         &:before{
             content: "";
@@ -512,6 +514,7 @@
                 margin-top: -10px;
                 left: 24px;
                 z-index: 10;
+                outline: none;
             }
             &.slick-next{
                 top: 80px;
@@ -519,6 +522,7 @@
                 right: 24px;
                 transform: rotate(180deg);
                 z-index: 10;
+                outline: none;
             }
             &:before{
                 content: "";

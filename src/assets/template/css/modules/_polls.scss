@@ -5,9 +5,12 @@
   margin-right: -15px;
   &__item{
     padding: 0 15px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 100%;
     font-size: 16px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 30px;
+    }
     @media($bp-larger-than-tablet) {
       width: 50%;
     }
@@ -46,38 +49,73 @@
     }
   }
   &__card{
-    border: 1px solid $blue;
     max-width: 360px;
     margin-left: auto;
     margin-right: auto;
+    @media($bp-larger-than-mobile) {
+      border: 1px solid $blue;
+    }
   }
   &__image{
-    height: 200px;
+    height: 160px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @media($bp-larger-than-mobile) {
+      height: 200px;
+    }
   }
   &__text{
-    line-height: 125%;
-    padding: 24px 18px 21px 18px;
+    line-height: 165%;
+    padding: 4px 0 9px 0;
     color: #333538;
+    font-size: 12px;
+    @media($bp-larger-than-mobile) {
+      padding: 24px 18px 21px 18px;
+      font-size: 14px;
+      line-height: 125%;
+    }
   }
   &__start{
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 30px;
+    }
     .btn{
-      width: 164px;
+      width: 140px;
+      padding: 4px 12px;
+      font-size: 12px;
+      @media($bp-larger-than-mobile) {
+        width: 164px;
+        padding: 5px 12px;
+        font-size: 14px;
+      }
     }
   }
-}
-.show__more{
-  text-align: center;
-  margin-bottom: 60px;
-  margin-top: 28px;
-  .btn{
-    width: 164px;
+
+  .show__more{
+    text-align: center;
+    margin-bottom: 18px;
+    margin-top: 8px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 60px;
+      margin-top: 28px;
+    }
+    .btn{
+      width: 140px;
+      padding: 4px 12px;
+      font-size: 12px;
+      @media($bp-larger-than-mobile) {
+        width: 164px;
+        padding: 5px 12px;
+        font-size: 14px;
+      }
+    }
   }
+
 }
+
 
 
 .auth-form{
@@ -161,5 +199,8 @@
   button{
     border: 0 none;
     width: 164px;
+  }
+  .mfp-close{
+    display: none;
   }
 }

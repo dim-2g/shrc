@@ -2,7 +2,10 @@
   display: flex;
   justify-content: space-between;
   margin-top: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  @media($bp-larger-than-tablet) {
+    margin-bottom: 20px;
+  }
   &__category{
     text-transform: uppercase;
     font-size: 12px;
@@ -13,6 +16,10 @@
     font-size: 12px;
     &.btn{
      width: 150px;
+     padding: 2px 7px;
+     @media($bp-larger-than-tablet) {
+        padding: 5px 12px;
+     }
       //padding: 4px 30px;
     }
   }
@@ -22,23 +29,39 @@
   margin-left: auto;
   margin-right: auto;
   &__name{
-    font-size: 20px;
+    font-size: 16px;
     color: $grey;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     line-height: 125%;
+    @media($bp-larger-than-tablet) {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
   }
   &__image{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 370px;
-    margin-bottom: 26px;
+    //height: 160px;
+    margin-bottom: 10px;
+    @media($bp-larger-than-tablet) {
+      //height: 370px;
+      margin-bottom: 26px;
+    }
+    img{
+      max-width: 100%;
+    }
+    
   }
   &__content{
-    font-size: 14px;
+    font-size: 12px;
     color: $grey;
     line-height: 120%;
-    margin-bottom: 56px;
+    margin-bottom: 15px;
+    @media($bp-larger-than-tablet) {
+      font-size: 14px;
+      margin-bottom: 56px;
+    }
     p{
       margin-bottom: 16px;
     }
