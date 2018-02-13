@@ -100,6 +100,11 @@
       .remuneration__text{
         display: block;
       }
+      .remuneration__toggle{
+        &:before{
+          transform: rotate(0);
+        }
+      }
     }
   }
   &__card{
@@ -143,6 +148,7 @@
     cursor: pointer;
     z-index: 20;
     text-align: center;
+    
     @media($bp-larger-than-tablet) {
       display: none;
     }
@@ -150,6 +156,9 @@
       content: "";
       display: inline-block;
       @include sprite($close);
+      transition: $cubic;
+      transform: rotate(45deg);
+
       //position: absolute;
       //top: 4px;
       //left: 20px;
@@ -325,6 +334,11 @@
     &.open{
       .management__text{
         display: block;
+      }
+      .remuneration__toggle{
+        &:before{
+          transform: rotate(0);
+        }
       }
     }
   }
